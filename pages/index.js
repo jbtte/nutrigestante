@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import MainBanner from '../components/MainBanner'
 import Booking from '../components/Booking'
+import ProfessionalAreas from '../components/ProfessionalAreas'
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <MainBanner />
         <Booking />
+        <ProfessionalAreas />
       </main>
     </div>
   )

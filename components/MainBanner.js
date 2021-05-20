@@ -6,6 +6,7 @@ const Content = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
   height: 100vh;
   width: 100%;
@@ -17,7 +18,7 @@ const Content = styled.div`
 const CrossBar = styled.div`
   width: 100%;
   padding: 5px 160px;
-  top: 66%;
+  top: 45%;
   position: relative;
   font-size: 22px;
   color: rgba(193,85,193,1);
@@ -25,16 +26,39 @@ const CrossBar = styled.div`
   @media (max-width: 768px) {
     font-size: 16px;
     padding: 15px;
+    top: 50%;
+
     h1 {
       font-size: 22px;
     }
   }
   `
 
+  const LogoImage = styled.div`
+    margin: 40px;
+    width:250px;
+    height:125px;
+    @media (max-width: 768px) {
+      width:100px;
+      height:50px;
+      margin: 15px;
+    }
+  `
+
 export default function MainBanner () {
   return (
     <Content>
-
+    
+    <LogoImage>
+    <Image
+      src='/images/logo-nome.png'
+      alt="Logo Nutrigestante - Mulher Grávida"
+      width={150}
+      height={75}
+      layout="responsive"
+      quality={65}
+    />
+    </LogoImage>
       <CrossBar>
         <p className="px-md-4">cuidando do bem estar das</p>
         <h1>Futuras mamães</h1>
