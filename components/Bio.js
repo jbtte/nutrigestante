@@ -15,9 +15,9 @@ const Card = styled.div`
 `
 
 const Photo = styled.div`
-  height: 200px;
-  width: 400px;
-  padding-top: 20px;
+  height: 400px;
+  width: 267px;
+  padding-top: 40px;
 `
 
 
@@ -28,7 +28,7 @@ export default function Bio () {
     <Image
       src='/images/meninos-2.png'
       alt="Foto Fabiola e Filhos"
-      width={80}
+      width={66}
       height={100}
       layout="responsive"
       quality={65}
