@@ -1,12 +1,15 @@
 import Head from 'next/head'
+import Comment from '../models/comments'
+import dbConnect from '../middleware/mongodb'
+
 import styles from '../styles/Home.module.css'
 import MainBanner from '../components/MainBanner'
 import Booking from '../components/Booking'
 import ProfessionalAreas from '../components/ProfessionalAreas'
 import Bio from '../components/Bio'
+import Comments from '../components/Comments'
 
-
-export default function Home() {
+function Home({ comments }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -28,7 +31,28 @@ export default function Home() {
         <Booking />
         <ProfessionalAreas />
         <Bio />
+        <Comments comments={comments}/>
       </main>
     </div>
   )
 }
+
+/* Retrieves comments data from mongodb database */
+export async function getServerSideProps() {
+  await dbConnect()
+
+  /* find all the data in our database */
+  const result = await Comment.find({})
+  const comments = result.map((doc) => {
+    const comment = doc.toObject()
+    comment.createdAt = comment.createdAt.toString()
+    comment.updatedAt = comment.updatedAt.toString()
+    comment._id = comment._id.toString()
+    return comment
+  })
+
+  return { props: { comments: comments } }
+}
+
+
+export default Home

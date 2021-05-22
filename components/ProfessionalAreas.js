@@ -8,13 +8,11 @@ background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 background-attachment: fixed;
-
 height: 400px;
 width: 100%;
+text-shadow: 1px 1px #999;
 color: rgba(193,85,193,1);
-
 @media (max-width: 768px) {
-  
 }
 `
 

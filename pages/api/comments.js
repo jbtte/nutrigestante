@@ -8,8 +8,11 @@ export default async function handler (req, res) {
 
   switch (method) {
     case 'GET':
-      try{res.status(200).json({sucess:"Good"})}
-      catch(e) {res.status(400).json({sucess: false})}
+      try{
+        const comments = await Comment.find({})
+        return res.status(200).send(comments)
+      }
+      catch(e) {res.status(400).json(e.message)}
       break
     case 'POST':
       try{
