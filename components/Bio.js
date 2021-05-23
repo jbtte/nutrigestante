@@ -5,7 +5,7 @@ import bioText from '../static/bio-text.js'
 
 const Container = styled.div`
   margin: 40px;
-  color: #2e669e;
+  color: ${props => props.theme.colors.blueDark};
 `
 
 const Card = styled.div`
@@ -15,8 +15,6 @@ const Card = styled.div`
 `
 
 const Photo = styled.div`
-  height: 400px;
-  width: 267px;
   padding-top: 40px;
 `
 
@@ -28,10 +26,10 @@ export default function Bio () {
     <Image
       src='/images/meninos-2.png'
       alt="Foto Fabiola e Filhos"
-      width={66}
-      height={100}
+      width={0.7}
+      height={0.8}
       layout="responsive"
-      quality={65}
+      quality={100}
       
     />
   </Photo>

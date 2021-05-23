@@ -1,55 +1,83 @@
 import styled from 'styled-components';
+import Carousel from 'react-bootstrap/Carousel'
+import { useState } from 'react'
+
 
 const Content = styled.div`
   background: linear-gradient(180deg, rgba(252,170,246,0.25) 24%, rgba(170,209,252,0.81) 100%), url('/images/diamond.png');
-  height: 600px;
+  height: 500px;
   width: 100%;
+  background-attachment: fixed;
+  
   `
 
 const Title = styled.h2`
   padding-top: 60px;
+  margin-bottom: 40px;
   text-align:center;
-  color: rgba(193,85,193,1);
-  margin-bottom: 30px;
+  text-shadow: 1px 1px ${props => props.theme.colors.grayShadow};
+  color: ${props => props.theme.colors.purpleSecondary};
+  
 `
 
 const MessageCard = styled.div`
-  background-color: #fff;
-  color: #2e669e;
-  width: 20em;
-  height: 11em;
-  border-radius: 10px;
-  margin: 15px 40px;
-  box-shadow: 1px 1px rgba(193,85,193,0.15);
-  h5{
-    font-size: 18px;
-  }
+  color: ${props => props.theme.colors.blueDark};
+  
+  h4{
+    line-height: 150%;
+    text-align: center;
+    opacity: 0.8
+    cursor: pointer;
+}
+
   p{
+    font-size: 22px;
     text-align: right;
     opacity: 0.70;
     font-family: 'Dancing Script', cursive;
-    margin-bottom: 0px;
+  }
+
+  .message-card{
+    height: 300px;
   }
 `
 
 const MessageBox = ({name, message}) => {
-  return (<MessageCard className='card'>
-      <div className='card-body d-flex flex-column'>
-          <h5 className="card-text flex-grow-1">{message}</h5>
-         <p>{name}</p>        
+  return (<MessageCard>
+      <div className="col-sm-10 col-md-6 mx-auto">
+        <div className="message-card">
+            <h4>{message}</h4>
+            <p>{name}</p>        
+          </div>
       </div>
     </MessageCard>
   )
 }
 
 export default function Comments({ comments }) {
+  const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+  
   return (<Content>
-    <Title>Olha o carinho das minhas pacientes</Title>
-    <div className="d-flex flex-md-wrap justify-content-around">
-      {comments.slice(0,5).map((comment) =>{
-        return (<MessageBox name={comment.name} message={comment.message}/>)
-        })
-      }
-    </div>
+      <Title>Olha o carinho das minhas pacientes</Title>
+      <Carousel  
+        fade
+        wrap
+        indicators={false} 
+        interval={7500}
+        pause={'hover'}
+        >
+          {comments.slice(0,5).map((comment, index) =>{
+            return (
+              <Carousel.Item key={index}>
+                <MessageBox name={comment.name} message={comment.message}/>
+              </Carousel.Item>
+            )
+            })
+          }
+      </Carousel>
     </Content>)
 }

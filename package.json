@@ -9,12 +9,17 @@
     "dev-db": "/Users/joaopaulo/mongodb/bin/mongod --dbpath=/Users/joaopaulo/mongodb-data"
   },
   "dependencies": {
-    "bootstrap": "^5.0.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "bootstrap": "^4.6.0",
     "eslint": "^7.26.0",
     "mongoose": "^5.12.10",
     "next": "10.2.2",
     "react": "17.0.2",
+    "react-bootstrap": "^1.6.0",
     "react-dom": "17.0.2",
+    "react-fontawesome": "^1.7.1",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {}

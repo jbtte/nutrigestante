@@ -1,13 +1,20 @@
 import Head from 'next/head'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Theme from "../theme/main";
 import Comment from '../models/comments'
 import dbConnect from '../middleware/mongodb'
-
 import styles from '../styles/Home.module.css'
 import MainBanner from '../components/MainBanner'
 import Booking from '../components/Booking'
 import ProfessionalAreas from '../components/ProfessionalAreas'
 import Bio from '../components/Bio'
 import Comments from '../components/Comments'
+import Vitrium from '../components/Vitrium'
+import Faq from '../components/Faq'
+import SocialMedias from '../components/SocialMedias'
+
+
 
 function Home({ comments }) {
   return (
@@ -23,17 +30,31 @@ function Home({ comments }) {
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#95c0d0" />
 
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+      <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+        crossorigin="anonymous" 
+        />
+
       </Head>
 
       <main className={styles.main}>
+      <Theme>
         <MainBanner />
-        <Booking />
+        <Booking message={"Vamos começar a sua dieta!"}/>
         <ProfessionalAreas />
         <Bio />
         <Comments comments={comments}/>
+        <Booking message={"Vamos conversar sobre o seu bem-estar e do bebê!"}/>
+        <Faq />
+        <SocialMedias />
+        <Vitrium />
+      </Theme>
       </main>
+
     </div>
+
   )
 }
 

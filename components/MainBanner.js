@@ -21,7 +21,7 @@ const CrossBar = styled.div`
   top: 45%;
   position: relative;
   font-size: 22px;
-  color: rgba(193,85,193,1);
+  color: ${props => props.theme.colors.purpleSecondary};
   background: linear-gradient(90deg, rgba(170,209,252,0.3958771008403361) 0%, rgba(237,241,251,0.4042804621848739) 15%, rgba(237,241,251,0) 100%);
   @media (max-width: 768px) {
     font-size: 16px;

@@ -10,8 +10,8 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 height: 400px;
 width: 100%;
-text-shadow: 1px 1px #999;
-color: rgba(193,85,193,1);
+text-shadow: 1px 1px ${props => props.theme.colors.grayShadow};
+color: ${props => props.theme.colors.purpleSecondary};
 @media (max-width: 768px) {
 }
 `
