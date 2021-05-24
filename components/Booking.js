@@ -8,6 +8,8 @@ const Container = styled.div`
     padding: 60px 0;
     h1 {
       font-size: 1.5em;
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 
@@ -41,11 +43,12 @@ width: 500px;
 
   @media (max-width: 768px) {
     font-size: 1em;
+    width: 200px;
   }
 `;
 
 export default function Booking ({message}) {
-  return (<Container className="d-flex flex-column justify-content-center">
+  return (<Container className="d-flex flex-column justify-content-center text-center">
     <h1>{message}</h1>
     <Button>
       <a href="https://api.whatsapp.com/send?phone=5561981149601">

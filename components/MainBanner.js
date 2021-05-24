@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image'
+import Carousel from 'react-bootstrap/Carousel'
+
 
 const Content = styled.div`
   background: linear-gradient(180deg, rgba(252,170,246,0.25) 0%, rgba(251,237,250,0.25) 100%), url('/images/pregnant.jpeg');
@@ -48,7 +50,7 @@ const CrossBar = styled.div`
 export default function MainBanner () {
   return (
     <Content>
-    
+      <img src={`${process.env.PUBLIC_URL}/images/pregnant.jpeg`} alt="" />
     <LogoImage>
     <Image
       src='/images/logo-nome.png'

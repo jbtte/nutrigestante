@@ -13,7 +13,7 @@ width: 100%;
 text-shadow: 1px 1px ${props => props.theme.colors.grayShadow};
 color: ${props => props.theme.colors.purpleSecondary};
 @media (max-width: 768px) {
-}
+  height: 600px
 `
 
 const RoundImage = styled.div`
@@ -23,7 +23,14 @@ const RoundImage = styled.div`
   h3 {
      font-size: 24px;
   }
-
+  @media (max-width: 768px) {
+    width: 75px;
+    margin: 30px;    
+    h3 {
+      font-size: 18px;
+   }
+  
+  }
 `
 
 const Avatar = ({imageName, title}) => {
@@ -43,7 +50,7 @@ export default function ProfessionalAreas () {
   return (
     <Content className="d-flex flex-column justify-content-around ">
       <h1 className=" text-center">Como eu posso te ajudar</h1>
-      <div className="d-flex justify-content-around">
+      <div className="d-flex justify-content-around flex-wrap">
         <Avatar imageName={'dieta'} title={'Nutrição Pré-Natal'}/>
         <Avatar imageName={'balanca'} title={'Controle de Peso'}/>
         <Avatar imageName={'diabetes-gestacional'} title={'Diabetes Gestacional'}/>

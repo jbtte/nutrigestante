@@ -14,6 +14,7 @@ const Content = styled.div`
     color: #2e669e
   }
   @media (max-width: 768px) {
+    background-position: 20% 0%;
   }
 `
 
@@ -45,9 +46,6 @@ export default function Vitrium () {
           <h4>Vitrium Centro Médico </h4>
           <p>SGAS 614 - L2 Sul - Sala 151  - (<a href="https://www.google.com.br/maps/place/Nutricionista+para+Gestantes+-+Nutri%C3%A7%C3%A3o+gestante/@-15.8357103,-47.9142477,18z/data=!4m5!3m4!1s0x0:0x214df389edb21b55!8m2!3d-15.8360827!4d-47.91323" target="_blank">Google maps</a>)</p>
         </div>
-        
-
-        
       </CrossBar>
     </Content>
   )

@@ -14,15 +14,13 @@ const Container = styled.div`
     &:hover{
       color: ${props => props.theme.colors.pinkPrimary};
     }
-  }
-
-
-  @media (max-width: 768px) {
-      padding: 60px 0;
-      h1 {
-        font-size: 1.5em;
+    @media (max-width: 768px) {
+      margin: auto 15px;
+      padding: 5px;
     }
   }
+
+  
 `
 
 export default function SocialMedias () {

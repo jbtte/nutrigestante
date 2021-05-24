@@ -7,8 +7,10 @@ const Content = styled.div`
   background: linear-gradient(180deg, rgba(252,170,246,0.25) 24%, rgba(170,209,252,0.81) 100%), url('/images/diamond.png');
   height: 500px;
   width: 100%;
-  background-attachment: fixed;
-  
+  background-attachment: fixed;  
+  @media (max-width: 768px) {
+    height: 600px;
+     }
   `
 
 const Title = styled.h2`
@@ -28,6 +30,9 @@ const MessageCard = styled.div`
     text-align: center;
     opacity: 0.8
     cursor: pointer;
+    @media (max-width: 768px) {
+      font-size: 16px; 
+       }
 }
 
   p{
@@ -35,6 +40,8 @@ const MessageCard = styled.div`
     text-align: right;
     opacity: 0.70;
     font-family: 'Dancing Script', cursive;
+
+    
   }
 
   .message-card{

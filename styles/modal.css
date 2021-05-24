@@ -1,0 +1,20 @@
+.modal-body{
+  color: #2e669e;
+  font-family: 'Josefin Slab', serif;
+  font-size: 18px;
+}
+
+.modal-header{
+  color: #2e669e;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+
+.custom-btn{
+  background: #fff;
+  color: #c155c1;
+  border: 2px solid #c155c1;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
