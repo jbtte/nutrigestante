@@ -26,9 +26,26 @@ const Content = styled.div`
   const FaqIcons = styled.div`
     width: 40%;
     margin: auto auto;
+    filter: drop-shadow(0px 0px 1px ${props => props.theme.colors.purpleSecondary});
+    
+    svg{
+      padding: 40px;
+    }
+
+  svg:hover{
+    filter: drop-shadow(0px 0px 4px ${props => props.theme.colors.pinkPrimary});
+
+
+  }
+
     @media (max-width: 768px) {
-      width: 1%;
-      margin: 10px
+      width: 80%;
+      margin: auto auto;
+
+      svg{
+        margin: 0 10px;
+        padding: 0px;
+      }
     }
   `
 export default function Faq() {
@@ -57,10 +74,13 @@ export default function Faq() {
     <Content>
       <h1 className="py-5 text-center">Como é a consulta</h1>
       <FaqIcons className='d-flex justify-content-around'>
-      <FontAwesomeIcon icon={faComments} onClick={handleCommentShow} className='mx-5'/>
-        <FontAwesomeIcon icon={faClock} onClick={handleClockShow} className='mx-5'/>
-        <FontAwesomeIcon icon={faAppleAlt} onClick={handleAppleShow} className='mx-5'/>
-        <FontAwesomeIcon icon={faQuestion} onClick={handleQuestionShow} className='mx-5'/>
+      <FontAwesomeIcon 
+        icon={faComments} 
+        onClick={handleCommentShow} 
+        />
+        <FontAwesomeIcon icon={faClock} onClick={handleClockShow} />
+        <FontAwesomeIcon icon={faAppleAlt} onClick={handleAppleShow} />
+        <FontAwesomeIcon icon={faQuestion} onClick={handleQuestionShow} />
       </FaqIcons>
     </Content>
 
