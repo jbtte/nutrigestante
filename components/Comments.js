@@ -35,6 +35,10 @@ const MessageCard = styled.div`
        }
 }
 
+.small-font{
+  font-size: 18px;
+}
+
   p{
     font-size: 22px;
     text-align: right;
@@ -53,7 +57,7 @@ const MessageBox = ({name, message}) => {
   return (<MessageCard>
       <div className="col-sm-10 col-md-6 mx-auto">
         <div className="message-card">
-            <h4>{message}</h4>
+            <h4 className={message.length > 400 ? "small-font" : ""} >{message}</h4> 
             <p>{name}</p>        
           </div>
       </div>
@@ -67,7 +71,13 @@ export default function Comments({ comments }) {
     const handleSelect = (selectedIndex, e) => {
       setIndex(selectedIndex);
     };
-  
+
+    const commentsShowed = () => {
+      const randomComments = comments.sort(() => Math.random() - 0.5);
+      console.log(randomComments.slice(0,10))
+      return randomComments.slice(0,10) 
+    }
+      
   return (<Content>
       <Title>Olha o carinho das minhas pacientes</Title>
       <Carousel  
@@ -77,7 +87,7 @@ export default function Comments({ comments }) {
         interval={7500}
         pause={'hover'}
         >
-          {comments.slice(0,5).map((comment, index) =>{
+          {commentsShowed().map((comment, index) =>{
             return (
               <Carousel.Item key={index}>
                 <MessageBox name={comment.name} message={comment.message}/>

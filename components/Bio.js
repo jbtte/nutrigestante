@@ -17,10 +17,18 @@ const Card = styled.div`
   margin-right: 50px;
   margin-top: 60px;
   text-align: center;
+  p{
+    font-size: 14px;
+  }
 `
 
 const Photo = styled.div`
   padding-top: 40px;
+  img{
+
+    height: 200px;
+    width: 800px;
+  }
 `
 
 
@@ -49,17 +57,15 @@ export default function Bio () {
     </>)
   }
 
-  return (<Container className="d-md-flex justify-content-around">
+  return (<Container className="d-md-flex justify-content-center">
   
   <Photo className="col-md-3 col-sm-12">
     <Image
-      src='/images/meninos-2.png'
+      src='/images/fabiola-6.jpg'
       alt="Foto Fabiola e Filhos"
-      width={0.7}
-      height={0.8}
-      layout="responsive"
-      quality={100}
-      
+      width={1000}
+      height={1000}
+      layout="responsive"      
     />
   </Photo>
 

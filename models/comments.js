@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const commentSchema = new mongoose.Schema({
+const commentsSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Me fala seu nome para eu saber quem é'],
@@ -19,4 +19,4 @@ const commentSchema = new mongoose.Schema({
   timestamps: true
 })
 
-export default mongoose.models.Comment || mongoose.model('Comment',  commentSchema)
+export default mongoose.models.Comments || mongoose.model('Comments',  commentsSchema)

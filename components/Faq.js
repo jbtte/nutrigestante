@@ -34,8 +34,6 @@ const Content = styled.div`
 
   svg:hover{
     filter: drop-shadow(0px 0px 4px ${props => props.theme.colors.pinkPrimary});
-
-
   }
 
     @media (max-width: 768px) {
@@ -56,31 +54,18 @@ export default function Faq() {
 
   // Comment
   const handleCommentClose = () => setComment(false);
-  const handleCommentShow = () => setComment(true);
-
-  // Clock
   const handleClockClose = () => setClock(false);
-  const handleClockShow = () => setClock(true);
-
-  // Apple
   const handleAppleClose = () => setApple(false);
-  const handleAppleShow = () => setApple(true);
-
-  // Question
   const handleQuestionClose = () => setQuestion(false);
-  const handleQuestionShow = () => setQuestion(true);
 
   return (<>
     <Content>
       <h1 className="py-5 text-center">Como é a consulta</h1>
       <FaqIcons className='d-flex justify-content-around'>
-      <FontAwesomeIcon 
-        icon={faComments} 
-        onClick={handleCommentShow} 
-        />
-        <FontAwesomeIcon icon={faClock} onClick={handleClockShow} />
-        <FontAwesomeIcon icon={faAppleAlt} onClick={handleAppleShow} />
-        <FontAwesomeIcon icon={faQuestion} onClick={handleQuestionShow} />
+        <FontAwesomeIcon icon={faComments} onClick={() => setComment(true)}/>
+        <FontAwesomeIcon icon={faClock} onClick={() => setClock(true)} />
+        <FontAwesomeIcon icon={faAppleAlt} onClick={() => setApple(true)} />
+        <FontAwesomeIcon icon={faQuestion} onClick={()=>setQuestion(true)} />
       </FaqIcons>
     </Content>
 

@@ -37,9 +37,11 @@ if (!cached) {
       useCreateIndex: true,
     }
 
-    cached.promise = connect(MONGODB_URI, opts).then((mongoose) => {
-      return mongoose
-    })
+    cached.promise = connect(MONGODB_URI, opts)
+                                  .then((mongoose) => {
+                                    console.log('Mongodb connected')
+                                  return mongoose
+                                })
   }
   cached.conn = await cached.promise
   return cached.conn
