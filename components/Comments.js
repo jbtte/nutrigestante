@@ -74,7 +74,6 @@ export default function Comments({ comments }) {
 
     const commentsShowed = () => {
       const randomComments = comments.sort(() => Math.random() - 0.5);
-      console.log(randomComments.slice(0,10))
       return randomComments.slice(0,10) 
     }
       
