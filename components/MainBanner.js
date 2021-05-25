@@ -14,6 +14,7 @@ const Content = styled.div`
   width: 100%;
   @media (max-width: 768px) {
     background-position: right;
+    width: 100%;
   }
 `
 

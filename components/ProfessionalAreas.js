@@ -51,7 +51,7 @@ export default function ProfessionalAreas () {
   return (
     <Content className="d-flex flex-column justify-content-around">
       <h1 className=" text-center">Como eu posso te ajudar</h1>
-      <div className="d-flex justify-content-around">
+      <div className="d-flex justify-content-around flex-wrap">
         <Avatar imageName={'dieta'} title={'Nutrição Pré-Natal'}/>
         <Avatar imageName={'balanca'} title={'Controle de Peso'}/>
         <Avatar imageName={'diabetes-gestacional'} title={'Diabetes Gestacional'}/>

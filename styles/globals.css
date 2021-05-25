@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Josefin Slab', serif;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {

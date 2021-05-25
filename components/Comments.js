@@ -57,7 +57,7 @@ const MessageBox = ({name, message}) => {
   return (<MessageCard>
       <div className="col-sm-10 col-md-6 mx-auto">
         <div className="message-card">
-            <h4 className={message.length > 400 ? "small-font" : ""} >{message}</h4> 
+            <h4 className={message.length > 350 ? "small-font" : ""} >{message}</h4> 
             <p>{name}</p>        
           </div>
       </div>
