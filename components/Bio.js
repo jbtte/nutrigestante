@@ -1,36 +1,8 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import styled from 'styled-components';
 import Collapse from 'react-bootstrap/Collapse'
-
 import bioText from '../static/bio-text.js'
-
-const Container = styled.div`
-  margin: 40px;
-  color: ${props => props.theme.colors.blueDark};
-  @media (max-width: 768px) {
-    margin: 10px;
-  }
-`
-
-const Card = styled.div`
-  margin-right: 50px;
-  margin-top: 60px;
-  text-align: center;
-  p{
-    font-size: 14px;
-  }
-`
-
-const Photo = styled.div`
-  padding-top: 40px;
-  img{
-
-    height: 200px;
-    width: 800px;
-  }
-`
-
+import { Container, Card, Photo } from './styled/BioStyled'
 
 export default function Bio () {
   const [open, setOpen] = useState(false);
@@ -57,17 +29,17 @@ export default function Bio () {
     </>)
   }
 
-  return (<Container className="d-md-flex justify-content-center">
-  
-  <Photo className="col-md-3 col-sm-12">
-    <Image
-      src='/images/fabiola-6.jpg'
-      alt="Foto Fabiola e Filhos"
-      width={1000}
-      height={1000}
-      layout="responsive"      
-    />
-  </Photo>
+  return (
+  <Container className="d-md-flex justify-content-center">
+    <Photo className="col-md-3 col-sm-12">
+      <Image
+        src='/images/fabiola-6.jpg'
+        alt="Foto Fabiola e Filhos"
+        width={1000}
+        height={1000}
+        layout="responsive"      
+      />
+    </Photo>
 
     <Card className="col-md-5 col-sm-12">
       {mobile ? <MobileBio /> : <p >{bioText}</p>}

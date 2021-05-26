@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const commentsSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Me fala seu nome para eu saber quem é'],
+    required: true,
     trim: true
   },
   message: {
@@ -19,4 +19,5 @@ const commentsSchema = new mongoose.Schema({
   timestamps: true
 })
 
-export default mongoose.models.Comments || mongoose.model('Comments',  commentsSchema)
+
+export default mongoose.models.comment || mongoose.model('comment',  commentsSchema) 

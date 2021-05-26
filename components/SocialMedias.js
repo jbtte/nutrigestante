@@ -1,32 +1,11 @@
-import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons' 
-
-const Container = styled.div`
-  height: 150px;
-
-  a{
-    font-size: 30px;
-    color: ${props => props.theme.colors.blueDark};
-    margin: auto 30px;
-    padding: 30px;
-    &:hover{
-      color: ${props => props.theme.colors.pinkPrimary};
-    }
-    @media (max-width: 768px) {
-      margin: auto 15px;
-      padding: 5px;
-    }
-  }
-
-  
-`
+import { Container } from './styled/SocialMediasStyled'
 
 export default function SocialMedias () {
   
   return (<>
-
     <Container className="d-flex">
         <a href="https://www.facebook.com/nutrigestantefabiola" target="_blank">
           <FontAwesomeIcon icon={faFacebook} size="lg" className='p-4'/>
@@ -38,7 +17,5 @@ export default function SocialMedias () {
           <FontAwesomeIcon icon={faWhatsapp} className='p-4'/>
         </a>
     </Container>
-
-
   </>)
 }

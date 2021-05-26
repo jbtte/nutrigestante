@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Theme from "../theme/main";
+import styles from '../styles/Home.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Comment from '../models/comments'
 import dbConnect from '../middleware/mongodb'
-import styles from '../styles/Home.module.css'
+
 import MainBanner from '../components/MainBanner'
 import Booking from '../components/Booking'
 import ProfessionalAreas from '../components/ProfessionalAreas'
@@ -13,8 +15,6 @@ import Comments from '../components/Comments'
 import Vitrium from '../components/Vitrium'
 import Faq from '../components/Faq'
 import SocialMedias from '../components/SocialMedias'
-
-
 
 function Home({ comments }) {
   return (
@@ -50,10 +50,7 @@ function Home({ comments }) {
         <SocialMedias />
         <Vitrium />
       </Theme>
-  
-
     </div>
-
   )
 }
 
@@ -70,9 +67,7 @@ export async function getServerSideProps() {
     comment._id = comment._id.toString()
     return comment
   })
-
   return { props: { comments: comments } }
 }
-
 
 export default Home
