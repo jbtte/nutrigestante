@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useForm } from "react-hook-form";
-import { Content, Bar, FormDiv, ImageDiv, SavedDiv} from '../components/styled/CommentsPageStyled'
+import { Content, FormDiv, ImageDiv, SavedDiv} from '../components/styled/CommentsPageStyled'
+import Bar from '../components/styled/Bar'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,7 +19,7 @@ export default function Comments() {
     
   const onSubmit = async ({name, message}, e) => {
     setLoading(true)
-    
+
     try {
       await fetch (`/api/comments?name=${name}&message=${message}`, {method: 'POST'})
       e.target.reset()

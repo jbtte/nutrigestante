@@ -4,13 +4,6 @@ const Content = styled.div`
   height: 100vh;
   `
 
-  const Bar = styled.div`
-  background: linear-gradient(180deg, rgba(252,170,246,0.25) 24%, rgba(170,209,252,0.81) 100%), url('/images/diamond.png');
-  height: 15%;
-  width: 100%;
-  padding: 15px 30px;
-  `
-
   const FormDiv = styled.div`
   height: 70%;
   width: 60%;
@@ -65,4 +58,4 @@ const SavedDiv = styled.div`
   color: ${props => props.theme.colors.purpleSecondary};
 `
 
-export { Content, Bar, FormDiv, ImageDiv, SavedDiv}
+export { Content, FormDiv, ImageDiv, SavedDiv}
