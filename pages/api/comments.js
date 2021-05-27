@@ -14,7 +14,8 @@ export default async function handler (req, res) {
       }
       catch(e) {res.status(400).json(e.message)}
       break
-    case 'POST':
+    
+      case 'POST':
       try{
         const comment = new Comment({
           name: req.query.name,
@@ -25,6 +26,5 @@ export default async function handler (req, res) {
       } catch (e) {
         return res.status(400).send(e.message)
       }
-
   }
 }

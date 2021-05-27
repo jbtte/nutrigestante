@@ -55,6 +55,9 @@ const Content = styled.div`
 
 const ImageDiv = styled.div`
   width: 200px; 
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `
 
 const SavedDiv = styled.div`
