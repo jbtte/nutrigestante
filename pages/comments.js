@@ -46,6 +46,7 @@ export default function Comments() {
               height={110}
               quality={65}
               layout="responsive"
+              className="mb-2"
             />
           </ImageDiv>
         </Bar>

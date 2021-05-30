@@ -6,10 +6,27 @@ import Theme from "../theme/main";
 import Image from 'next/image'
 import Table from 'react-bootstrap/Table'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styled from 'styled-components';
+import { ProSidebar, SidebarHeader, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
 
+
+const SideBarDiv = styled.div`
+padding: 5px 5px;
+  .pro-sidebar-layout {
+  background-color: #2e669e !important;
+  padding: 10px; 
+  font-size: 30px;
+}
+
+.pro-item-content {
+  font-size: 20px; 
+}
+`
 
 export default  function Controle () {
 const [comments, setComments] = useState([])
+const [sidebarOpen, setSidebarOpen] = useState(true)
 let active=4;
 
 useEffect(() => {
@@ -36,6 +53,20 @@ useEffect(() => {
         />
       </ImageDiv>
     </Bar>
+
+
+    <div className="d-flex">
+    <SideBarDiv>
+      <ProSidebar>
+      <SidebarHeader> Menu </SidebarHeader>
+        <Menu iconShape="square">
+          <MenuItem>Comentários</MenuItem>
+        </Menu>
+      </ProSidebar>
+    </SideBarDiv>
+      
+      
+      
       <Content> 
         <div>
           <Table striped bordered hover>
@@ -43,7 +74,7 @@ useEffect(() => {
               <tr>
                 <th>Nome</th>
                 <th>Mensagem</th>
-                <th>Aprovado</th>
+                <th>Aprovada</th>
               </tr>
             </thead>
               <tbody>
@@ -60,6 +91,7 @@ useEffect(() => {
             </Table>
         </div>
       </Content>
+    </div>
     <Bar>
     </Bar>
  </Theme> 
