@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Content, RoundImage} from './styled/ProfessionalAreasStyled'
+import { Content, RoundImage} from '../styled/ProfessionalAreasStyled'
 
 const Avatar = ({imageName, title}) => {
   return (

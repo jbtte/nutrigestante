@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel'
-import {Content, Title, MessageCard} from './styled/CommentsStyled'
+import {Content, Title, MessageCard} from '../styled/CommentsStyled'
 
 const MessageBox = ({name, message}) => {
   return (<MessageCard>

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Collapse from 'react-bootstrap/Collapse'
-import bioText from '../static/bio-text.js'
-import { Container, Card, Photo } from './styled/BioStyled'
+import bioText from '../../static/bio-text.js'
+import { Container, Card, Photo } from '../styled/BioStyled'
 
 export default function Bio () {
   const [open, setOpen] = useState(false);

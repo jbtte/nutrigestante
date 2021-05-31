@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Content, CrossBar, LogoImage} from './styled/MainBannerStyled'
+import { Content, CrossBar, LogoImage} from '../styled/MainBannerStyled'
 
 export default function MainBanner () {
   return (

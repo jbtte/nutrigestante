@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faAppleAlt, faQuestion, faComments  } from '@fortawesome/free-solid-svg-icons' 
 import FaqModal from './FaqModal'
-import faqText from '../static/faqText'
-import {Content, FaqIcons} from './styled/FaqStyled'
+import faqText from '../../static/faqText'
+import {Content, FaqIcons} from '../styled/FaqStyled'
   
 export default function Faq() {
   const [clock, setClock] = useState(false);

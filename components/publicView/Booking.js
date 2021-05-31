@@ -1,4 +1,4 @@
-import { Container, Button} from './styled/BookingStyled'
+import { Container, Button} from '../styled/BookingStyled'
 
 export default function Booking ({message}) {
   return (<Container className="d-flex flex-column justify-content-center text-center">

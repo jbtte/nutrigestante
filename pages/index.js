@@ -6,14 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Comment from '../models/comments'
 import dbConnect from '../middleware/mongodb'
 
-import MainBanner from '../components/MainBanner'
-import Booking from '../components/Booking'
-import ProfessionalAreas from '../components/ProfessionalAreas'
-import Bio from '../components/Bio'
-import Comments from '../components/Comments'
-import Vitrium from '../components/Vitrium'
-import Faq from '../components/Faq'
-import SocialMedias from '../components/SocialMedias'
+import MainBanner from '../components/PublicView/MainBanner'
+import Booking from '../components/PublicView/Booking'
+import ProfessionalAreas from '../components/PublicView/ProfessionalAreas'
+import Bio from '../components/PublicView/Bio'
+import Comments from '../components/PublicView/Comments'
+import Vitrium from '../components/PublicView/Vitrium'
+import Faq from '../components/PublicView/Faq'
+import SocialMedias from '../components/PublicView/SocialMedias'
 
 function Home({ comments }) {
   return (

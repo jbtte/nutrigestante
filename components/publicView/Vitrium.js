@@ -1,4 +1,4 @@
-import { Content, CrossBar } from './styled/VitriumStyled'
+import { Content, CrossBar } from '../styled/VitriumStyled'
 
 export default function Vitrium () {
   return (

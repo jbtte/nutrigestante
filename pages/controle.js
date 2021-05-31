@@ -6,26 +6,11 @@ import Theme from "../theme/main";
 import Image from 'next/image'
 import Table from 'react-bootstrap/Table'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styled from 'styled-components';
+import SideBarDiv from '../components/styled/SideBarDiv'
 import { ProSidebar, SidebarHeader, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import Pagination from 'react-bootstrap/Pagination'
 import Switch from "react-switch";
-
-const SideBarDiv = styled.div`
-padding: 5px 5px;
-  .pro-sidebar-layout {
-  background-color: #2e669e !important;
-  padding: 10px; 
-  font-size: 30px;
-}
-
-.pro-item-content {
-  font-size: 20px; 
-}
-`
-
-
 
 export default  function Controle () {
 const [comments, setComments] = useState([])

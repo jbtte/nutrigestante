@@ -1,7 +1,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons' 
-import { Container } from './styled/SocialMediasStyled'
+import { Container } from '../styled/SocialMediasStyled'
 
 export default function SocialMedias () {
   
