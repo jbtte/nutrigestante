@@ -36,7 +36,9 @@ useEffect(() => {
   try {
      fetch ('/api/comments')
      .then(data => data.json())
-     .then(comments => setComments(comments))
+     .then(comments => {
+      comments.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+       setComments(comments)})
   } catch(e) {console.error(e)}
 }, [])
 
@@ -52,10 +54,10 @@ for (let number = 1; number <= (comments.length/5+1); number++) {
 const handleAprovedChange = (id, index) => {
   try {
     fetch (`/api/comments?id=${id}`, {method: 'PATCH'})
-    
     comments[index].approved = !comments[index].approved
-
  } catch(e) {console.error(e)}
+  setComments([...comments])
+  console.log("All the way")
 }
 
 const messageBoard = () => {
