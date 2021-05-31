@@ -5,5 +5,6 @@ background: linear-gradient(180deg, rgba(252,170,246,0.25) 24%, rgba(170,209,252
 height: 15%;
 width: 100%;
 padding: 15px 30px;
+position: ${props => props.sticky ? 'sticky' : 'static'};
 `
 export default Bar

@@ -26,5 +26,18 @@ export default async function handler (req, res) {
       } catch (e) {
         return res.status(400).send(e.message)
       }
+      break
+
+      case 'PATCH':
+        try{
+          const comment = await Comment.findById(req.query.id)
+          console.log(comment)
+          comment.approved = !comment.approved
+          await comment.save()
+          return res.status(201).send({sucess:"sucess", approved:comment.approved})
+        }catch(e){
+          return res.status(400).send(e.message)
+        }
+        break
   }
 }
