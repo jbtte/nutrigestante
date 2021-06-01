@@ -9,6 +9,9 @@ export default function SideBar () {
     <SidebarHeader> Menu </SidebarHeader>
       <Menu iconShape="square">
         <MenuItem>Comentários</MenuItem>
+        <MenuItem><a href="/api/auth/logout"> Logout</a></MenuItem>
+        
+
       </Menu>
     </ProSidebar>
   </SideBarDiv>
