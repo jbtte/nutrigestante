@@ -1,10 +1,24 @@
+import {  useEffect } from 'react'
 import Switch from "react-switch";
 import Table from 'react-bootstrap/Table'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Content from '../styled/ControlePageStyled'
 
 
 
-export default function CommentsView ({comments, active}) {
+
+export default function CommentsView ({comments, setComments, active}) {
+  
+  useEffect(() => {
+    try {
+       fetch ('/api/comments')
+       .then(data => data.json())
+       .then(comments => {
+        comments.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+         setComments(comments)})
+    } catch(e) {console.error(e)}
+  }, [])
+
   const handleAprovedChange = (id, index) => {
     try {
       fetch (`/api/comments?id=${id}`, {method: 'PATCH'})
@@ -38,17 +52,22 @@ export default function CommentsView ({comments, active}) {
     }))
   }
 
-  return ( 
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Mensagem</th>
-          <th>Aprovada</th>
-        </tr>
-      </thead>
-        <tbody>
-        {messageBoard()}
-        </tbody>
-    </Table>)
+  return (<Content>
+     <div>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Mensagem</th>
+            <th>Aprovada</th>
+          </tr>
+        </thead>
+          <tbody>
+          {messageBoard()}
+          </tbody>
+      </Table>
+    </div>
+    </Content>
+    )
+  
 }
